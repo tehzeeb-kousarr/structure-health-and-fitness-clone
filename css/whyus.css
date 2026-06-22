@@ -1,0 +1,116 @@
+.why-section {
+  background-color: var(--color-bg);
+  padding: var(--space-6) var(--space-5);
+}
+
+.why-section__lead {
+  max-width: 900px;
+  margin: 0 auto var(--space-5);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.why-block {
+  max-width: 900px;
+  margin: 0 auto var(--space-5);
+}
+
+.why-block h2 {
+  color: var(--color-accent);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.why-block p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: var(--space-3);
+}
+
+.why-block ol {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 0 0 var(--space-3) 1.2em;
+}
+
+.why-block a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.why-block hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: var(--space-4);
+}
+
+/* ---- Link tiles ---- */
+
+.link-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  max-width: 1140px;
+  margin: var(--space-5) auto 0;
+}
+
+.link-tile {
+  flex: 1 1 calc(50% - var(--space-4));
+  aspect-ratio: 16 / 10;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-tile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+.link-tile__overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-accent);
+  border-radius: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 700;
+  text-align: center;
+  padding: var(--space-3);
+  transition: background-color 0.3s;
+}
+
+.link-tile a:hover .link-tile__overlay,
+.link-tile a:focus-visible .link-tile__overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 600px) {
+  .why-section {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .link-tile {
+    flex-basis: 100%;
+  }
+}

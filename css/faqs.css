@@ -1,0 +1,74 @@
+.faq-hero {
+  background-color: #2b2b2b;
+  text-align: center;
+  padding: var(--space-6) var(--space-3);
+}
+
+.faq-hero h1 {
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.faq-list {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: var(--space-5) var(--space-3) var(--space-6);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: var(--space-3) 0;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 500;
+  list-style: none; /* hide default marker, we draw our own */
+  position: relative;
+  padding-right: 32px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 22px;
+  color: var(--color-accent);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: var(--space-2);
+  line-height: 1.7;
+}
+
+.faq-item a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.faq-item a:hover,
+.faq-item a:focus-visible {
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .faq-item summary {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,54 @@
+.values-section {
+  background-color: var(--color-bg);
+  padding: var(--space-6) var(--space-5);
+}
+
+.values-section__intro {
+  text-align: center;
+  margin-bottom: var(--space-5);
+}
+
+.values-section__intro h2 {
+  color: #fff;
+  font-size: clamp(28px, 4vw, 39px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.value-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.value-card {
+  flex: 1 1 380px;
+  background-color: var(--color-bg-darker);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
+
+.value-card h3 {
+  color: var(--color-accent);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  text-transform: capitalize;
+}
+
+.value-card p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .values-section {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+}

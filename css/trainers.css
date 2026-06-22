@@ -1,0 +1,135 @@
+.page-hero__kicker {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.trainers-intro {
+  background-color: var(--color-bg);
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  text-align: center;
+  color: #fff;
+}
+
+.trainers-intro h2 {
+  font-size: clamp(28px, 4vw, 39px);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.trainers-intro p {
+  max-width: 700px;
+  margin-inline: auto;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.trainers-intro a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.trainers-intro a:hover,
+.trainers-intro a:focus-visible {
+  color: var(--color-accent);
+}
+
+/* ---- Branch trainer grids ---- */
+
+.trainer-branch {
+  background-color: var(--color-bg);
+  padding: 0 var(--space-5) var(--space-6);
+}
+
+.trainer-branch h2 {
+  color: #fff;
+  font-size: clamp(20px, 3vw, 25px);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.trainer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.trainer-card {
+  flex: 1 1 240px;
+  max-width: 280px;
+}
+
+.trainer-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  box-shadow: 8px 0 16px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid var(--color-accent);
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition: transform 0.2s;
+}
+
+.trainer-card img:hover {
+  transform: scale(1.04);
+}
+
+.trainer-card h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: var(--space-2) 0 var(--space-1);
+  text-align: center;
+}
+
+.trainer-card__role {
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+  padding-bottom: var(--space-2);
+  position: relative;
+  text-align: center;
+}
+
+.trainer-card__role::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+  margin: 8px auto 0;
+}
+
+.trainer-card__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.trainer-card__social a{
+    text-decoration: none;
+}
+
+.trainer-card__social img {
+  width: 24px;
+  height: 24px;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  .trainers-intro,
+  .trainer-branch {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+}
